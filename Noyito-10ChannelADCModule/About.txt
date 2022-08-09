@@ -3,21 +3,21 @@ This folder contains LabVIEW example code written in LV2020 tested on Windows 10
 Item full description: NOYITO USB 10 Channel 12-Bit AD Data Acquisition Module STM32 UART Communication USB to Serial Chip CH340 ADC Module
 
 
-This module features 10 sampling channels (0VDC-3.3VDC tolerance), a 12-bit ADC (4095 counts MAX), and a sampling rate of around 500 msecs.
+This module features a 12-bit ADC (4095 counts MAX) with 10 sampling channels (0VDC-3.3VDC tolerance) and a sampling rate of around 500 msecs.
 
 The data is by default sent over the module's USB connector via serial communication at a Baudrate of 115200 bps, 8N1 frame, and no flow control.
 
 This module is a relatively low cost product (< $20) I found browsing Amazon that I decided to try out and was pleased to say worked fairly well. 
-That in turn motivated me to develop the code inside this folder for controlling the module.
+That in turn motivated me to develop the code inside this folder for intefacing wiht the module.
 
-The ADC module must be plugged into the computer prior to running the VIs and the driver for the deive must already be installed for the module. (For me the driver automatically installed once device was plugged in)
+The ADC module must be plugged into the computer prior to running the VIs and the driver for the device must already be installed for the module. (For me the driver automatically installed once the device was plugged in)
 In the Device Manager (tested on Windows 10 - 64 bit) the device appears under Ports (COM and LPT) with device description USB-SERIAL CH340. 
 
 
 To use one of the examples, download all of the VIs in the folder and run one of the following three example VIs. 
 
-1. Noyito10ChannelADC_ManualPollingExample.vi - Continously polls the data from the ADC module and displays in on the VI front panel until the user presses the Stop Polling control to end the VI. There is a option for Fast or Slow polling the user can select on the front panel to control the speed in which the data is refreshed on the VI front panel.
+1. Noyito10ChannelADC_ManualPollingExample.vi - Continously polls the data from the ADC module and displays it on the VI front panel until the user presses the Stop Polling control to end the VI. There is a option for Fast or Slow polling the user can select on the front panel to control the speed in which the data is refreshed on the VI front panel.
 
-2. Noyito10ChannelADC_SingleSampleAllChannels.vi - Gets a single sample from all 10 channels (CH0 - CH9) and displays the voltage (V) as well as ADC counts on the VI front panel/
+2. Noyito10ChannelADC_SingleSampleAllChannels.vi - Gets a single sample from all 10 channels (CH0 - CH9) and displays the voltage (V) as well as ADC counts on the VI front panel.
 
 3. Noyito10ChannelADC_MultiSampleAllChannels.vi - Gets multiple samples (user can select from 1-255) from all 10 channels (CH0 - CH9). The VI will collect all sampled voltages and counts and store them in arrays and will also compute the mean voltage (V) and mean ADC count for each channel. The mean can be calculated during run time or post run by selecting an option for the Average While Running control.
