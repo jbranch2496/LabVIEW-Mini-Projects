@@ -8,7 +8,7 @@ This module features a 12-bit ADC (4095 counts MAX) with 10 sampling channels (0
 The data is by default sent over the module's USB connector via serial communication at a Baudrate of 115200 bps, 8N1 frame, and no flow control.
 
 This module is a relatively low cost product (< $20) I found browsing Amazon that I decided to try out and was pleased to say worked fairly well. 
-That in turn motivated me to develop the code inside this folder for intefacing wiht the module.
+That in turn motivated me to develop the code inside this folder for interfacing with the module.
 
 The ADC module must be plugged into the computer prior to running the VIs and the driver for the device must already be installed for the module. (For me the driver automatically installed once the device was plugged in)
 In the Device Manager (tested on Windows 10 - 64 bit) the device appears under Ports (COM and LPT) with device description USB-SERIAL CH340. 
